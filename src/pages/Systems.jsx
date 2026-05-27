@@ -69,7 +69,7 @@ Why SQLite with WAL mode: At 100 users with read-heavy patterns, a managed datab
 
 Identity resolution: The platform injects x-user-email and x-user-id headers on every authenticated request. Which headers the platform actually injects required building a debug endpoint and dumping live request headers in production to confirm. The final implementation checks the enterprise user ID first (immutable, more reliable), falls back to email, falls back to a local dev fallback for local development.
 
-Deployment: the CI/CD pipeline is defined — vessel build, Memento signing, push to the enterprise container registry, then deploy to the platform via deploy.yaml. Fires on every push to main. Two-region deployment (us-west-2 and us-east-1) with traffic-based autoscaling. The Dockerfile uses a multi-stage build with a non-root appuser — a platform requirement and a container security best practice.`
+Deployment: the CI/CD pipeline is defined — vessel build, artifact signing, push to the enterprise container registry, then deploy to the platform via deploy.yaml. Fires on every push to main. Two-region deployment (us-west-2 and us-east-1) with traffic-based autoscaling. The Dockerfile uses a multi-stage build with a non-root appuser — a platform requirement and a container security best practice.`
       },
       {
         heading: 'API Surface',

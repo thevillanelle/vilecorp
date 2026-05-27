@@ -37,9 +37,9 @@ const tabs = [
 // Full skills database from portfolio work
 const skillsDB = [
   // Infrastructure
-  {skill:'Docker',cat:'Infrastructure',projects:['Hub Trilogy'],desc:'Multi-stage build, non-root appuser, pushed to docker.apple.com via Rio CI/CD pipeline'},
-  {skill:'Rio CI/CD',cat:'Infrastructure',projects:['Hub Trilogy'],desc:'vessel build → Memento signing → docker.apple.com → Shuri deploy.yaml — fires on every push to main'},
-  {skill:'Apple Shuri',cat:'Infrastructure',projects:['Hub Trilogy'],desc:'Two-region deployment (us-west-2 + us-east-1). Shuri injects x-user-email and x-user-id (DSID) headers on every authenticated request.'},
+  {skill:'Docker',cat:'Infrastructure',projects:['Hub Trilogy'],desc:'Multi-stage build, non-root appuser, pushed to the enterprise container registry via Rio CI/CD pipeline'},
+  {skill:'Rio CI/CD',cat:'Infrastructure',projects:['Hub Trilogy'],desc:'vessel build → artifact signing → the enterprise container registry → the production platform deploy.yaml — fires on every push to main'},
+  {skill:'Enterprise PaaS',cat:'Infrastructure',projects:['Hub Trilogy'],desc:'Two-region deployment (us-west-2 + us-east-1). The platform injects x-user-email and x-user-id headers on every authenticated request.'},
   {skill:'GitHub Actions',cat:'Infrastructure',projects:['Hub Trilogy','EQX Doubles','Training Hub','Engagement Arc'],desc:'CI/CD pipelines, PDF ingestion every 6 hours (Doubles), auto-deploy to GitHub Enterprise Pages (Training Hub)'},
   {skill:'GitHub Pages',cat:'Infrastructure',projects:['Hub Trilogy','Training Hub','Engagement Arc'],desc:'Stage 1 and 2 of Hub Trilogy, Apple GitHub Enterprise Pages for Training Hub (VPN-required), engagement sites'},
   {skill:'Railway',cat:'Infrastructure',projects:['EQX Doubles'],desc:'Flask server deployment via Procfile + railway.json — one-command deploy from CLI'},
@@ -101,8 +101,8 @@ const skillsDB = [
   {skill:'Geographic Profiling',cat:'Algorithms',projects:['EQX Doubles'],desc:"pickTop3() — morning pairs matched to downtown/Brooklyn, afternoon to midtown, evening to uptown. Reflects real NYC workout geography."},
   {skill:'PDF Ingestion',cat:'Algorithms',projects:['EQX Doubles'],desc:'Phase 1 GitHub Actions workflow pulls Equinox schedule PDFs every 6 hours, parses into PostgreSQL via Supabase'},
   // Identity & Security
-  {skill:'AppleConnect SSO',cat:'Identity & Security',projects:['Hub Trilogy'],desc:'Shuri-injected authentication headers. Confirmed by building a debug endpoint and dumping live request headers in production.'},
-  {skill:'DSID-based Identity',cat:'Identity & Security',projects:['Hub Trilogy'],desc:'Identity resolution chain: DSID first (immutable), email fallback, DEV_USER_EMAIL for local dev'},
+  {skill:'Enterprise SSO SSO',cat:'Identity & Security',projects:['Hub Trilogy'],desc:'the production platform-injected authentication headers. Confirmed by building a debug endpoint and dumping live request headers in production.'},
+  {skill:'enterprise user ID-based Identity',cat:'Identity & Security',projects:['Hub Trilogy'],desc:'Identity resolution chain: the enterprise user ID first (immutable), email fallback, DEV_USER_EMAIL for local dev'},
   {skill:'RBAC',cat:'Identity & Security',projects:['Hub Trilogy'],desc:'API access tiers: Public, Self, All authenticated, Admin or Project Lead, Admin only'},
   // Program & Design
   {skill:'Program Design & Evaluation',cat:'Program & Design',projects:['Seed Your Ideas','Engagement Arc'],desc:'Two-phase program delivery, zero added workload constraint, evaluation-driven redesign, four-build compounding arc'},
