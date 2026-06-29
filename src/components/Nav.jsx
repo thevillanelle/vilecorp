@@ -7,6 +7,7 @@ const links = [
   { to: '/content', label: 'CONTENT' },
   { to: '/ritualware', label: 'RITUALWARE' },
   { to: '/systems', label: 'SYSTEMS' },
+  { to: '/shop', label: 'SHOP' },
   { to: '/bio', label: 'BIO' },
 ]
 
