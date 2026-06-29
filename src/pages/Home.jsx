@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import SocialLinks from '../components/SocialLinks'
 
 const WorldMap = () => (
   <svg viewBox="0 0 1000 500" className="absolute inset-0 w-full h-full opacity-[0.04]"
@@ -32,11 +33,12 @@ export default function Home() {
             className="h-px max-w-[120px] mb-10 origin-left" style={{ background: 'var(--crimson)' }}/>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-            className="flex flex-wrap gap-3">
+            className="flex flex-wrap gap-3 mb-10">
             {[
               { to: '/content', label: 'CONTENT' },
               { to: '/ritualware', label: 'RITUALWARE' },
               { to: '/systems', label: 'SYSTEMS' },
+              { to: '/shop', label: 'SHOP' },
               { to: '/bio', label: 'BIO' },
             ].map(item => (
               <Link key={item.to} to={item.to}
@@ -44,6 +46,10 @@ export default function Home() {
                 {item.label}
               </Link>
             ))}
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>
+            <SocialLinks />
           </motion.div>
         </div>
       </section>

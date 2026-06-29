@@ -6,6 +6,8 @@ import Content from './pages/Content'
 import Ritualware from './pages/Ritualware'
 import Systems from './pages/Systems'
 import Bio from './pages/Bio'
+import Shop from './pages/Shop'
+import Links from './pages/Links'
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
         <Route path="/ritualware" element={<Ritualware />} />
         <Route path="/systems" element={<Systems />} />
         <Route path="/bio" element={<Bio />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/links" element={<Links />} />
       </Routes>
       <Footer />
     </div>
