@@ -10,11 +10,10 @@ const apps = [
     color: 'text-gold-DEFAULT',
     borderColor: 'border-gold-DEFAULT',
     features: [
-      'Style Bible — 32 questions with branching logic, lesson modals, and progress by section',
-      'The Oracle — AI outfit in 9 labeled sections (silhouette → weather swap) with live weather and Pexels mood board',
-      'My Looks — saved Oracle results with favorite/unfavorite and expandable sections',
-      'Inspo Upload — Gemini Vision reads images and extracts palette, silhouette, vibe words; offers to add to Style Bible',
-      'Style Finder (Clueless path) — 15 questions that excavate latent aesthetic identity; outputs named archetype, truth, blind spots, immediate moves',
+      'The Style Bible — built once, applied every day. Branching questions with lesson modals along the way, building your color season, your silhouette rules, and the things you\'ll never wear again',
+      'The Oracle — reads your rules and tells you exactly what to wear, head to toe, with live weather and a mood board pulled to match',
+      'My Looks — every Oracle result, saved, favorited, ready to repeat',
+      'Inspo Upload — drop in a photo, the Oracle reads the palette and silhouette and folds it back into your rules',
     ],
   },
   {
@@ -25,9 +24,9 @@ const apps = [
     color: 'text-crimson',
     borderColor: 'border-crimson',
     features: [
-      'Glow Up Audit — 42 questions across 12 sections generating section scores, verdicts, quick wins, week-1 plan, month-1 plan, non-negotiables',
-      'Style Finder — Rebrand path (15 Q: what\'s changing, who you\'re becoming) and Makeover path (15 Q: Glow Up Pyramid as framework)',
-      'Client Profile — aggregated view of Style Finder result and Glow Up scorecard',
+      'The Glow Up Audit — not a checklist, a scorecard. Skin, sleep, nutrition, fitness, hair, fragrance and more, scored, with quick wins and a plan you can use tomorrow morning',
+      'Style Finder — three different doors in: Clueless (you have a sense of style, you just can\'t name it), Rebrand (you know exactly what\'s changing), or Makeover (starting from the Glow Up Pyramid itself). Each ends in a named archetype, the truth, and your blind spots',
+      'Client Profile — your Style Finder result and your Glow Up scorecard, together',
     ],
   },
   {
@@ -38,12 +37,25 @@ const apps = [
     color: 'text-cream-muted',
     borderColor: 'border-cream-muted',
     features: [
-      'Neighborhood Finder — 14 questions (NYC) / 13 questions (LA, tuned to the 405 divide, parking, Eastside vs Westside). Rule-based scoring + AI narrative toggle',
-      'Third Space Finder — 80+ venues across NYC and LA filtered by goal (focus, social, movement, rest)',
-      'The Map — Leaflet.js dark map; venues colored by category; city toggle switches NYC/LA; custom pin support; "Open in Maps" on every venue',
-      'Burnout Audit — 15 questions diagnosing social, mental, or physical burnout with protocol and AI insight toggle',
-      'Quarterly Reinvention — 15 questions across aesthetic, social habits, skill acquisition with rule-based moves and AI 90-day plan',
-      "The Guide — Elle Porcher's Guide to Thriving in NYC encoded chapter by chapter, each section linking to its tool",
+      'Neighborhood Finder — matches you to where you\'d actually thrive, NYC or LA, with the reasoning shown, not just a name',
+      'Third Space Finder + The Map — venues curated by what you need (focus, social, movement, rest), pinned to a dark, custom map',
+      'Burnout Audit — names your burnout type, how severe it is, whether it\'s chronic, and what to do about it',
+      'Quarterly Reinvention — a season-by-season plan for what\'s next',
+      'Dating Profile Builder — your dating goal, your type, your pattern, and the one rule to stop breaking',
+      "The Guide — Elle's own Guide to Thriving in NYC, chapter by chapter, each one linked straight to the tool that goes with it",
+    ],
+  },
+  {
+    title: 'Ritualwealth',
+    question: 'When do I retire?',
+    domain: 'wealth.ritualware.app',
+    url: 'https://ritualware.app/ritualwealth',
+    color: 'text-crimson-light',
+    borderColor: 'border-crimson-light',
+    features: [
+      'A handful of quizzes, one number — Fire Type, Career, Home, Creative Income, Risk. Each one narrows your actual FIRE number, from Coast to Fat, and the portfolio to match',
+      'The Plan — every quiz synthesized into one roadmap, written in plain language: your number, your age, your monthly surplus',
+      'Debt Payoff + Milestones — real dates, not vibes. When you\'re debt-free, when the emergency fund is full, when the down payment is ready',
     ],
   },
   {
@@ -54,10 +66,63 @@ const apps = [
     color: 'text-gold-muted',
     borderColor: 'border-gold-muted',
     features: [
-      'Projects — CRUD with status badges (active, planning, wrap, complete, cancelled), expandable task lists, link, end date, notes',
-      'My Circle — people with free-text role (not a dropdown), skills tags, notes, color-coded initials avatar',
-      'Skills — tracked by category and level (Learning / Familiar / Proficient / Expert), updatable inline',
-      'Goals — with category, timeframe, description, completion toggle, stat summary',
+      'Projects — every active build, tracked by status, with tasks, links, and notes attached',
+      'My Circle — your people: their role in your work, the skills they bring, how to reach them',
+      'Skills — what you\'re learning, what you\'ve mastered, tracked honestly by level',
+      'Goals — time-boxed, categorized, checked off',
+    ],
+  },
+  {
+    title: 'Robin',
+    question: 'Who am I becoming?',
+    domain: 'robin.ritualware.app',
+    url: 'https://ritualware.app/robin',
+    color: 'text-gold-dim',
+    borderColor: 'border-gold-dim',
+    features: [
+      'Do the Dash — a short quiz that learns what you\'re actually optimizing for, then reorders your dashboard so the right thing is always on top',
+      'Your Dashboard — every result from every app, in one place: your style and saved looks, your glow tier, your neighborhood and burnout status, your FIRE number, your active projects',
+      'Your Ritual Profile — the centerpiece. Everything the suite knows about you, written up as a single piece in Elle\'s own voice — not a list of stats, a read. One click from anywhere in the suite, exportable as markdown',
+    ],
+  },
+]
+
+const standaloneTools = [
+  {
+    title: 'ATLAS',
+    question: "What's happening in the world?",
+    domain: 'atlas.ritualware.app',
+    url: 'https://atlas.ritualware.app',
+    description: 'The world is always moving. ATLAS puts all of it on a globe, live, right now — breaking news, conflicts, disasters, markets, launches, and the night sky, pinned to where they\'re actually happening.',
+    features: [
+      'Live feeds across news, conflicts, disasters, markets, launches, and astronomy, with planets and stars in real orbital position and the day/night line moving as it actually does outside',
+      'Connect any two events to find what links them, or travel back to any date and place',
+      'Save events, build watchlists, get alerts',
+    ],
+  },
+  {
+    title: "Sal's Library",
+    question: 'What should I read next?',
+    domain: 'library.ritualware.app',
+    url: 'https://library.ritualware.app',
+    description: 'Not a social reading app, not a bestseller list. A private system for logging what you\'ve actually read, rating it honestly, and knowing what\'s next.',
+    features: [
+      'A full library with ratings, reviews, read dates, a want list, and series tracking',
+      'Head-to-head matchups to settle your own rankings',
+      'A next-read engine that knows the difference between a book you finished and a book you loved',
+    ],
+  },
+  {
+    title: 'EQX Doubles',
+    question: 'Where do I work out?',
+    domain: 'thevillanelle.github.io/eqx-doubles',
+    url: 'https://thevillanelle.github.io/eqx-doubles/index.html',
+    description: 'Two classes that actually work together. Matched by type, timed for real travel, across all 36 NYC Equinox locations. For Equinox members — no login required.',
+    features: [
+      'Search any two class categories by day and time window, across every NYC club',
+      'Real travel time between studios — accounts for walkability and transit, not a straight-line guess',
+      'Club amenities and nearest subway lines, per location, synced nightly from official Equinox data',
+      'Shipped three ways: the original web app, a Python/Flask rewrite, and a native Swift/SwiftUI iOS app — same backend, three platforms',
     ],
   },
 ]
@@ -68,14 +133,14 @@ export default function Ritualware() {
       <SectionLabel>PLATFORM</SectionLabel>
       <h1 className="font-display text-[clamp(48px,8vw,100px)] text-cream-DEFAULT tracking-wide mb-4">RITUALWARE</h1>
       <p className="font-serif italic text-xl text-cream-muted max-w-3xl mb-6">
-        Four interconnected applications. One Supabase backend. One Google OAuth login. One cross-app profile.
+        Apps built for the life you're designing on purpose.
       </p>
       <p className="font-sans text-cream-muted max-w-3xl mb-16 leading-relaxed">
-        Ritualware is a lifestyle platform built on the personal frameworks of Elle Porcher. Each app answers a different question about how to live intentionally. Every answer accumulates in the Ritual Profile — a cross-app view of who you are across ~181 questions, exportable as markdown or sent to Gemini for a prose synthesis.
+        Six of these apps share one login and one Ritual Profile — everything you do in one writes into the next, and Robin assembles the whole picture. Three more stand entirely on their own, no shared profile required.
       </p>
 
-      {/* The four apps */}
-      <div className="space-y-6 mb-16">
+      {/* The six connected apps */}
+      <div className="space-y-6 mb-10">
         {apps.map((app, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -105,40 +170,37 @@ export default function Ritualware() {
         ))}
       </div>
 
-      {/* Architecture */}
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
-        <div className="bg-noir-card border border-noir-border p-8 rounded-sm">
-          <p className="font-mono text-xs text-gold-muted tracking-widest mb-4">DATA ARCHITECTURE</p>
-          <div className="font-mono text-sm text-cream-muted space-y-1 leading-relaxed">
-            <p className="text-cream-DEFAULT font-semibold mb-3">One Supabase project · 16 tables</p>
-            {['style_profiles', 'style_rules', 'oracle_results', 'style_finder_results',
-              'glow_up_results', 'neighborhood_results', 'burnout_results', 'reinvention_results',
-              'inspo_images', 'user_locations', 'atelier_projects', 'atelier_circle',
-              'atelier_skills', 'atelier_goals', 'ritual_profiles'].map(t => (
-              <p key={t} className="text-xs">{t}</p>
-            ))}
-          </div>
-          <p className="font-sans text-xs text-cream-muted mt-4">Row-Level Security on every table. Every user only ever sees their own data.</p>
-        </div>
-        <div className="bg-noir-card border border-noir-border p-8 rounded-sm">
-          <p className="font-mono text-xs text-gold-muted tracking-widest mb-4">BY THE NUMBERS</p>
-          <div className="space-y-4">
-            {[
-              ['Apps', '4'],
-              ['Supabase tables', '16'],
-              ['Total quiz questions', '~181'],
-              ['Cities', 'New York · Los Angeles'],
-              ['AI model', 'Gemini 2.5 Flash'],
-              ['Auth', 'Google OAuth + email/password'],
-              ['Maps', 'Leaflet.js + CartoDB dark tiles'],
-              ['Infrastructure', 'Vercel (4 deployments) · GitHub (4 repos)'],
-            ].map(([k, v]) => (
-              <div key={k} className="flex justify-between border-b border-noir-border pb-3">
-                <span className="font-mono text-xs text-cream-muted">{k}</span>
-                <span className="font-sans text-sm text-cream-DEFAULT">{v}</span>
+      {/* Standalone tools */}
+      <div className="mb-16">
+        <p className="font-mono text-xs text-gold-muted tracking-widest mb-4 mt-10">STANDALONE TOOLS · INDEPENDENT WORLDS</p>
+        <div className="space-y-4">
+          {standaloneTools.map((tool, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              className="bg-noir-card border border-noir-border p-8 rounded-sm">
+              <div className="grid md:grid-cols-3 gap-8">
+                <div>
+                  <p className="font-serif italic text-lg text-cream-muted mb-1">{tool.question}</p>
+                  <h3 className="font-display text-3xl tracking-wide mb-1 text-cream-DEFAULT">{tool.title}</h3>
+                  <p className="font-mono text-xs text-cream-muted mb-3">{tool.domain}</p>
+                  <a href={tool.url} target="_blank" rel="noopener noreferrer"
+                    className="font-mono text-xs text-cream-muted hover:text-cream-DEFAULT transition-colors">
+                    {tool.domain} →
+                  </a>
+                  <p className="font-sans text-xs text-cream-muted mt-4 leading-relaxed">{tool.description}</p>
+                </div>
+                <div className="md:col-span-2">
+                  <ul className="space-y-2">
+                    {tool.features.map((f, j) => (
+                      <li key={j} className="flex gap-3 font-sans text-sm text-cream-muted leading-relaxed">
+                        <span className="text-cream-muted shrink-0 mt-0.5">—</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -148,8 +210,8 @@ export default function Ritualware() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             { title: 'AI-optional, not AI-mandatory', body: 'Every feature has a rule-based default. AI adds a narrative layer when the user wants it. The apps work without hitting the AI API, load instantly, and don\'t fail silently.' },
-            { title: 'Granularity as a differentiator', body: 'Not 5 questions — 32. Not a slider — 42 questions with 12 subcategories. The depth of the questions IS the product differentiation.' },
-            { title: 'One profile, four apps', body: 'The first quiz populates 32 answers. Add Glow Up and you have 74. Add Burnout and you have 89. Each app makes the profile richer. The Ritual Profile is the payoff of every quiz.' },
+            { title: 'Granularity as a differentiator', body: 'These aren\'t 3-question vibe checks. The depth of the questions is the product — it\'s what makes the output feel true instead of generic.' },
+            { title: 'One profile, every app', body: 'The first quiz starts your Ritual Profile. Every app after that adds to it. Robin assembles the whole picture, then writes it back to you in Elle\'s own voice — the same way she reads everyone else.' },
             { title: 'Source material is intellectual property', body: 'Every question in the Style Bible reflects Elle Porcher\'s personal style framework. The Glow Up Pyramid is her hierarchy. The NYC guide is her document. The content is original.' },
           ].map((item, i) => (
             <div key={i} className="bg-noir-elevated p-5 rounded-sm">
