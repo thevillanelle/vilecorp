@@ -12,6 +12,7 @@ const youtubeVideos = [
 ]
 
 const tiktokPosts = [
+  { url: 'https://www.tiktok.com/t/ZTShuGftv/' },
   { url: 'https://www.tiktok.com/t/ZTShDqdqw/' },
   { url: 'https://www.tiktok.com/t/ZTShUSSwt/' },
   { url: 'https://www.tiktok.com/t/ZTShUB9yY/' },
