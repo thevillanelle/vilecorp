@@ -1,9 +1,8 @@
 // ── SOCIAL LINKS ──────────────────────────────────────────────────────────
-// Replace YOUR_* values with actual profile URLs before deploying
 export const SOCIAL_LINKS = [
-  { platform: 'Instagram', handle: '@elleporcher', url: 'YOUR_INSTAGRAM_URL' },
-  { platform: 'TikTok',    handle: '@elleporcher', url: 'YOUR_TIKTOK_URL'    },
-  { platform: 'YouTube',   handle: 'Elle Porcher',  url: 'YOUR_YOUTUBE_URL'   },
+  { platform: 'Instagram', handle: '@villanelle.jpg', url: 'https://instagram.com/villanelle.jpg' },
+  { platform: 'TikTok',    handle: '@elleporcher',    url: 'https://tiktok.com/@elleporcher'       },
+  { platform: 'YouTube',   handle: '@elleporcher',    url: 'https://youtube.com/@elleporcher'      },
 ]
 
 // ── PRODUCTS ───────────────────────────────────────────────────────────────
