@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import SocialLinks from '../components/SocialLinks'
 import EmailCapture from '../components/EmailCapture'
+import InstagramFeed from '../components/InstagramFeed'
 import { PRODUCTS, AFFILIATES } from '../config/products'
 
 const fade = (delay = 0) => ({
@@ -60,6 +61,11 @@ export default function Links() {
       {/* Social Links */}
       <motion.div {...fade(0.2)} className="flex justify-center mb-12">
         <SocialLinks className="gap-8" />
+      </motion.div>
+
+      {/* Instagram Feed */}
+      <motion.div {...fade(0.25)} className="mb-12">
+        <InstagramFeed limit={6} columns={3} />
       </motion.div>
 
       {/* Divider */}

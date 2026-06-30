@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
+import InstagramFeed from '../components/InstagramFeed'
 
 // ── Add real YouTube video IDs here to populate previews ──
 // Thumbnail URL: https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
@@ -128,18 +129,15 @@ export default function Content() {
             @villanelle.jpg →
           </a>
         </div>
-        <motion.a href="https://instagram.com/villanelle.jpg" target="_blank" rel="noopener noreferrer"
+        <motion.div
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="block group">
-          <div className="grid grid-cols-3 gap-1 mb-4">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="aspect-square bg-noir-elevated border border-noir-border group-hover:border-crimson/30 transition-colors"/>
-            ))}
-          </div>
-          <p className="font-mono text-xs text-cream-muted group-hover:text-crimson transition-colors tracking-widest">
-            VIEW @villanelle.jpg →
-          </p>
-        </motion.a>
+          className="mb-4">
+          <InstagramFeed limit={6} columns={3} />
+        </motion.div>
+        <a href="https://instagram.com/villanelle.jpg" target="_blank" rel="noopener noreferrer"
+          className="font-mono text-xs text-cream-muted hover:text-crimson transition-colors tracking-widest">
+          VIEW @villanelle.jpg →
+        </a>
       </section>
     </main>
   )

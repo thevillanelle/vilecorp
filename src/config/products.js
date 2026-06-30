@@ -1,3 +1,7 @@
+// ── INSTAGRAM FEED ──────────────────────────────────────────────────────────
+// Behold.so JSON feed — auto-updates with latest posts
+export const INSTAGRAM_FEED_URL = 'https://feeds.behold.so/VtgmoTopUIlGPyDN3so5'
+
 // ── SOCIAL LINKS ──────────────────────────────────────────────────────────
 export const SOCIAL_LINKS = [
   { platform: 'Instagram', handle: '@villanelle.jpg', url: 'https://instagram.com/villanelle.jpg' },
