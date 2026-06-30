@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import SocialLinks from './SocialLinks'
 
 export default function Footer() {
@@ -10,12 +9,6 @@ export default function Footer() {
           <p className="font-mono text-xs text-cream-muted">© 2025 VILE LLC</p>
         </div>
         <SocialLinks />
-        <Link
-          to="/links"
-          className="font-mono text-xs tracking-widest text-cream-muted hover:text-crimson transition-colors"
-        >
-          LINK IN BIO →
-        </Link>
       </div>
     </footer>
   )
