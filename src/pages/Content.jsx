@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
 import InstagramFeed from '../components/InstagramFeed'
@@ -19,6 +20,39 @@ const tiktokPosts = [
   { url: 'https://www.tiktok.com/t/ZTShUkLbE/' },
   { url: 'https://www.tiktok.com/t/ZTShUAAKv/' },
 ]
+
+function TikTokCard({ post, index }) {
+  const [thumb, setThumb] = useState(null)
+
+  useEffect(() => {
+    fetch(`/api/tiktok-oembed?url=${encodeURIComponent(post.url)}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => { if (data?.thumbnail_url) setThumb(data.thumbnail_url) })
+      .catch(() => {})
+  }, [post.url])
+
+  return (
+    <motion.a href={post.url} target="_blank" rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }} transition={{ delay: index * 0.06 }}
+      className="block group bg-noir-elevated border border-noir-border rounded-sm overflow-hidden">
+      <div className="aspect-[9/16] bg-noir-card flex items-center justify-center relative overflow-hidden">
+        {thumb
+          ? <img src={thumb} alt="TikTok" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          : <div className="w-12 h-12 rounded-full border border-[#69C9D0]/30 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" style={{ color: '#69C9D0' }}>
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+        }
+        <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/30 transition-colors" />
+      </div>
+      <div className="p-3">
+        <p className="font-mono text-xs tracking-widest" style={{ color: '#69C9D0' }}>WATCH →</p>
+      </div>
+    </motion.a>
+  )
+}
 
 function YouTubeCard({ video, index }) {
   const thumb = video.id
@@ -96,22 +130,7 @@ export default function Content() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {tiktokPosts.map((post, i) => (
-            <motion.a key={i} href={post.url} target="_blank" rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-              className="block group bg-noir-elevated border border-noir-border rounded-sm overflow-hidden">
-              <div className="aspect-[9/16] bg-noir-card flex items-center justify-center relative">
-                <div className="w-12 h-12 rounded-full border border-[#69C9D0]/30 flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" style={{ color: '#69C9D0' }}>
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-                <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/20 transition-colors"/>
-              </div>
-              <div className="p-3">
-                <p className="font-mono text-xs tracking-widest" style={{ color: '#69C9D0' }}>WATCH →</p>
-              </div>
-            </motion.a>
+            <TikTokCard key={post.url} post={post} index={i} />
           ))}
         </div>
       </section>
