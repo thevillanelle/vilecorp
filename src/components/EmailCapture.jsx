@@ -19,6 +19,12 @@ export default function EmailCapture({
     setStatus('loading')
     setErrorMsg('')
 
+    if (!supabase) {
+      setStatus('error')
+      setErrorMsg('Email capture is not configured yet.')
+      return
+    }
+
     const { error } = await supabase
       .from('waitlist')
       .insert({ email: email.trim().toLowerCase(), list })
