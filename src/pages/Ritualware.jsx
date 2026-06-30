@@ -82,7 +82,7 @@ const apps = [
     features: [
       'Do the Dash — a short quiz that learns what you\'re actually optimizing for, then reorders your dashboard so the right thing is always on top',
       'Your Dashboard — every result from every app, in one place: your style and saved looks, your glow tier, your neighborhood and burnout status, your FIRE number, your active projects',
-      'Your Ritual Profile — the centerpiece. A full case study assembled from everything the apps know about you, then sent to the Oracle for a written narrative back — exportable as markdown. Reachable from Ritualwear, Ritualwhere, or Ritualwealth at /profile',
+      'Your Ritual Profile — the centerpiece. Everything the suite knows about you, written up as a single piece in Elle\'s own voice — not a list of stats, a read. One click from anywhere in the suite, exportable as markdown',
     ],
   },
 ]
@@ -211,7 +211,7 @@ export default function Ritualware() {
           {[
             { title: 'AI-optional, not AI-mandatory', body: 'Every feature has a rule-based default. AI adds a narrative layer when the user wants it. The apps work without hitting the AI API, load instantly, and don\'t fail silently.' },
             { title: 'Granularity as a differentiator', body: 'These aren\'t 3-question vibe checks. The depth of the questions is the product — it\'s what makes the output feel true instead of generic.' },
-            { title: 'One profile, every app', body: 'The first quiz starts your Ritual Profile. Every app after that adds to it. Robin assembles the whole picture — and the Oracle can write it back to you in prose.' },
+            { title: 'One profile, every app', body: 'The first quiz starts your Ritual Profile. Every app after that adds to it. Robin assembles the whole picture, then writes it back to you in Elle\'s own voice — the same way she reads everyone else.' },
             { title: 'Source material is intellectual property', body: 'Every question in the Style Bible reflects Elle Porcher\'s personal style framework. The Glow Up Pyramid is her hierarchy. The NYC guide is her document. The content is original.' },
           ].map((item, i) => (
             <div key={i} className="bg-noir-elevated p-5 rounded-sm">
