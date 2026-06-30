@@ -11,9 +11,13 @@ const youtubeVideos = [
 ]
 
 const tiktokPosts = [
-  { title: "Silk Circuit", tag: "Silk Circuit" },
-  { title: "Villain Studies", tag: "Villain Studies" },
-  { title: "Scored", tag: "Scored" },
+  { url: 'https://www.tiktok.com/t/ZTShDqdqw/' },
+  { url: 'https://www.tiktok.com/t/ZTShUSSwt/' },
+  { url: 'https://www.tiktok.com/t/ZTShUB9yY/' },
+  { url: 'https://www.tiktok.com/t/ZTShUMgpe/' },
+  { url: 'https://www.tiktok.com/t/ZTShUreh6/' },
+  { url: 'https://www.tiktok.com/t/ZTShUkLbE/' },
+  { url: 'https://www.tiktok.com/t/ZTShUAAKv/' },
 ]
 
 function YouTubeCard({ video, index }) {
@@ -90,25 +94,22 @@ export default function Content() {
             @elleporcher →
           </a>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {tiktokPosts.map((post, i) => (
-            <motion.a key={i} href="https://tiktok.com/@elleporcher" target="_blank" rel="noopener noreferrer"
+            <motion.a key={i} href={post.url} target="_blank" rel="noopener noreferrer"
               initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.06 }}
               className="block group bg-noir-elevated border border-noir-border rounded-sm overflow-hidden">
               <div className="aspect-[9/16] bg-noir-card flex items-center justify-center relative">
-                <div className="text-center">
-                  <div className="w-12 h-12 rounded-full border border-[#69C9D0]/30 flex items-center justify-center mx-auto mb-2">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" style={{ color: '#69C9D0' }}>
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
+                <div className="w-12 h-12 rounded-full border border-[#69C9D0]/30 flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" style={{ color: '#69C9D0' }}>
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
                 </div>
                 <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/20 transition-colors"/>
               </div>
-              <div className="p-4">
-                <p className="font-mono text-xs tracking-widest mb-1" style={{ color: '#69C9D0' }}>{post.tag}</p>
-                <p className="font-sans text-sm text-cream-DEFAULT">{post.title}</p>
+              <div className="p-3">
+                <p className="font-mono text-xs tracking-widest" style={{ color: '#69C9D0' }}>WATCH →</p>
               </div>
             </motion.a>
           ))}
