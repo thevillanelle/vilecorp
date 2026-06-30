@@ -91,6 +91,7 @@ function YouTubeCard({ video, index }) {
 }
 
 export default function Content() {
+  const [tiktokExpanded, setTiktokExpanded] = useState(false)
   return (
     <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
       <SectionLabel>CONTENT</SectionLabel>
@@ -130,10 +131,25 @@ export default function Content() {
           </a>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {tiktokPosts.map((post, i) => (
+          {tiktokPosts.slice(0, 4).map((post, i) => (
             <TikTokCard key={post.url} post={post} index={i} />
           ))}
         </div>
+        {tiktokExpanded && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            {tiktokPosts.slice(4).map((post, i) => (
+              <TikTokCard key={post.url} post={post} index={i} />
+            ))}
+          </motion.div>
+        )}
+        <button
+          onClick={() => setTiktokExpanded(v => !v)}
+          className="mt-6 font-mono text-xs tracking-widest transition-colors"
+          style={{ color: '#69C9D0' }}>
+          {tiktokExpanded ? '— SHOW LESS' : '+ SEE MORE'}
+        </button>
       </section>
 
       {/* Instagram */}
