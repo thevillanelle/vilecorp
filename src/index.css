@@ -39,7 +39,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { background-color: var(--noir); color: var(--cream); font-family: 'DM Sans', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+  body { background-color: var(--noir); color: var(--cream); font-family: 'DM Sans', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; overflow-x: hidden; }
 }
 
 @layer utilities {
