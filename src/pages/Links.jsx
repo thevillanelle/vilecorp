@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import SocialLinks from '../components/SocialLinks'
 import GirlsNightOutForm from '../components/GirlsNightOutForm'
-import InstagramFeed from '../components/InstagramFeed'
 import { AFFILIATES } from '../config/products'
 
 const fade = (delay = 0) => ({
@@ -59,18 +58,6 @@ export default function Links() {
       <motion.div {...fade(0.2)} className="flex justify-center mb-12">
         <SocialLinks className="gap-8" />
       </motion.div>
-
-      {/* Instagram Feed */}
-      <motion.div {...fade(0.25)} className="mb-12">
-        <InstagramFeed limit={6} columns={3} />
-      </motion.div>
-
-      {/* Divider */}
-      <motion.div
-        initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.3, duration: 0.4 }}
-        className="h-px mb-12 origin-left"
-        style={{ background: 'var(--noir-border)' }}
-      />
 
       {/* GNO Waitlist */}
       <motion.section {...fade(0.35)} className="mb-12">
