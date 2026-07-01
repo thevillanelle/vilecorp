@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import SectionLabel from '../components/SectionLabel'
 
 const apps = [
   {
@@ -119,13 +118,17 @@ const standaloneTools = [
 export default function Ritualware() {
   return (
     <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
-      <SectionLabel>PLATFORM</SectionLabel>
       <h1 className="font-display text-[clamp(48px,8vw,100px)] text-cream-DEFAULT tracking-wide mb-4">RITUALWARE</h1>
       <p className="font-serif italic text-xl text-cream-muted max-w-3xl mb-6">
         Every answer. One place.
       </p>
+      <a href="https://ritualware.app" target="_blank" rel="noopener noreferrer"
+        className="inline-block font-mono text-xs tracking-widest px-6 py-3 mb-10 transition-colors"
+        style={{ background: 'var(--crimson)', color: 'var(--cream)' }}>
+        VISIT RITUALWARE.APP →
+      </a>
       <p className="font-sans text-cream-muted max-w-3xl mb-16 leading-relaxed">
-        Six apps share one login and one Ritual Profile — everything you do in one writes into the next, and Robin assembles the whole picture. Three more stand entirely on their own.
+        Ritualware is the software company behind the suite — apps built for the life you're designing on purpose. Six apps share one Ritual Profile that compounds over time. Three more are their own worlds entirely.
       </p>
 
       {/* The six connected apps */}
@@ -184,10 +187,6 @@ export default function Ritualware() {
         </div>
       </div>
 
-      <a href="https://ritualware.app" target="_blank" rel="noopener noreferrer"
-        className="inline-block bg-crimson hover:bg-crimson-dark text-cream-DEFAULT font-mono text-sm tracking-widest px-8 py-4 transition-colors">
-        VISIT RITUALWARE.APP →
-      </a>
     </main>
   )
 }
