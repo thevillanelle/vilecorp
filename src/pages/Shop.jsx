@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
-import EmailCapture from '../components/EmailCapture'
 import { PRODUCTS } from '../config/products'
 
 function ProductCard({ product, index }) {
@@ -84,22 +83,6 @@ export default function Shop() {
       >
         Systems, guides, and frameworks for the woman who architects her pleasure.
       </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-        className="mb-16 p-8 border border-crimson/30 bg-crimson/5"
-      >
-        <p className="font-serif italic text-lg text-cream-muted mb-6">
-          Girls' Night Out is coming. Get on the list first.
-        </p>
-        <EmailCapture
-          list="girls-night-out"
-          label="Girls' Night Out — Join the Waitlist"
-          placeholder="your@email.com"
-          cta="I'm in"
-          successMessage="You're on the list."
-        />
-      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {PRODUCTS.filter(p => p.type === 'stripe').map((product, i) => (

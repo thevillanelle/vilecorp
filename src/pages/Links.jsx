@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import SocialLinks from '../components/SocialLinks'
 import EmailCapture from '../components/EmailCapture'
 import InstagramFeed from '../components/InstagramFeed'
-import { PRODUCTS, AFFILIATES } from '../config/products'
+import { AFFILIATES } from '../config/products'
 
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
@@ -42,9 +42,6 @@ function LinkCard({ href, label, sub, badge, external, download }) {
 }
 
 export default function Links() {
-  const paidProducts = PRODUCTS.filter(p => p.type === 'stripe')
-  const freeProduct  = PRODUCTS.find(p => p.type === 'download')
-
   return (
     <main className="pt-24 pb-24 px-6 max-w-lg mx-auto">
 
@@ -92,39 +89,6 @@ export default function Links() {
         className="h-px mb-12 origin-left"
         style={{ background: 'var(--noir-border)' }}
       />
-
-      {/* Free Download */}
-      {freeProduct && (
-        <motion.section {...fade(0.5)} className="mb-6">
-          <p className="font-mono text-xs tracking-[0.2em] text-cream-muted mb-4 uppercase">Free Download</p>
-          <LinkCard
-            href={freeProduct.url}
-            label={freeProduct.name}
-            sub={freeProduct.description}
-            badge="FREE"
-            download
-          />
-        </motion.section>
-      )}
-
-      {/* Paid Products */}
-      {paidProducts.length > 0 && (
-        <motion.section {...fade(0.6)} className="mb-6">
-          <p className="font-mono text-xs tracking-[0.2em] text-cream-muted mb-4 uppercase">Digital Products</p>
-          <div className="flex flex-col gap-3">
-            {paidProducts.map(p => (
-              <LinkCard
-                key={p.id}
-                href={p.url}
-                label={p.name}
-                sub={p.price}
-                badge={p.badge}
-                external
-              />
-            ))}
-          </div>
-        </motion.section>
-      )}
 
       {/* Affiliates */}
       <motion.section {...fade(0.7)} className="mb-6">
