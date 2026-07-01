@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import SocialLinks from '../components/SocialLinks'
-import EmailCapture from '../components/EmailCapture'
+import GirlsNightOutForm from '../components/GirlsNightOutForm'
 import InstagramFeed from '../components/InstagramFeed'
 import { AFFILIATES } from '../config/products'
 
@@ -72,15 +72,9 @@ export default function Links() {
         style={{ background: 'var(--noir-border)' }}
       />
 
-      {/* Email Capture */}
+      {/* GNO Waitlist */}
       <motion.section {...fade(0.35)} className="mb-12">
-        <EmailCapture
-          list="girls-night-out"
-          label="Girls' Night Out — Join the Waitlist"
-          placeholder="your@email.com"
-          cta="I'm in"
-          successMessage="You're on the list."
-        />
+        <GirlsNightOutForm />
       </motion.section>
 
       {/* Divider */}
