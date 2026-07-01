@@ -85,7 +85,7 @@ export default function Shop() {
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {PRODUCTS.filter(p => p.type === 'stripe').map((product, i) => (
+        {PRODUCTS.map((product, i) => (
           <ProductCard key={product.id} product={product} index={i} />
         ))}
       </div>

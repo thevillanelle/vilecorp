@@ -6,9 +6,9 @@ import InstagramFeed from '../components/InstagramFeed'
 // ── Add real YouTube video IDs here to populate previews ──
 // Thumbnail URL: https://img.youtube.com/vi/{VIDEO_ID}/maxresdefault.jpg
 const youtubeVideos = [
-  { id: '2pTGvJgBNq4', title: null, series: null },
-  { id: 'fdKEyU-YgEk', title: null, series: null },
-  { id: 'Hgs8j-KtLGk', title: null, series: null },
+  { id: '2pTGvJgBNq4', title: 'Come With Me to the LaQuan Smith Show', series: 'NYC WITH ELLE' },
+  { id: 'fdKEyU-YgEk', title: "Why Do Girl's Girls Hate Women", series: "ELLE'S WORLD" },
+  { id: 'Hgs8j-KtLGk', title: 'Fall/Winter Fragrances: Cherry Coded', series: 'CURRENT HYPERFIXATION' },
 ]
 
 const tiktokPosts = [

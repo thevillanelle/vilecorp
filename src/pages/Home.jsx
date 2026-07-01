@@ -37,9 +37,9 @@ export default function Home() {
             {[
               { to: '/content', label: 'CONTENT' },
               { to: '/ritualware', label: 'RITUALWARE' },
-              { to: '/systems', label: 'SYSTEMS' },
               { to: '/shop', label: 'SHOP' },
               { to: '/bio', label: 'BIO' },
+              { to: '/links', label: 'LINKS' },
             ].map(item => (
               <Link key={item.to} to={item.to}
                 className="font-mono text-xs tracking-widest text-cream-muted border border-noir-border px-5 py-3 hover:border-crimson hover:text-cream-DEFAULT transition-colors">
