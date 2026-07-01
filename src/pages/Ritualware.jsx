@@ -121,8 +121,7 @@ const standaloneTools = [
     features: [
       'Search any two class categories by day and time window, across every NYC club',
       'Real travel time between studios — accounts for walkability and transit, not a straight-line guess',
-      'Club amenities and nearest subway lines, per location, synced nightly from official Equinox data',
-      'Shipped three ways: the original web app, a Python/Flask rewrite, and a native Swift/SwiftUI iOS app — same backend, three platforms',
+      'Club amenities and nearest subway lines, per location',
     ],
   },
 ]
@@ -149,10 +148,9 @@ export default function Ritualware() {
               <div>
                 <p className="font-serif italic text-lg text-cream-muted mb-1">{app.question}</p>
                 <h3 className={`font-display text-3xl tracking-wide mb-1 ${app.color}`}>{app.title}</h3>
-                <p className="font-mono text-xs text-cream-muted mb-3">{app.domain}</p>
                 <a href={app.url} target="_blank" rel="noopener noreferrer"
-                  className="font-mono text-xs text-cream-muted hover:text-cream-DEFAULT transition-colors">
-                  {app.url.replace('https://', '')} →
+                  className="font-mono text-xs text-cream-muted hover:text-crimson transition-colors">
+                  {app.domain} →
                 </a>
               </div>
               <div className="md:col-span-2">
@@ -181,9 +179,8 @@ export default function Ritualware() {
                 <div>
                   <p className="font-serif italic text-lg text-cream-muted mb-1">{tool.question}</p>
                   <h3 className="font-display text-3xl tracking-wide mb-1 text-cream-DEFAULT">{tool.title}</h3>
-                  <p className="font-mono text-xs text-cream-muted mb-3">{tool.domain}</p>
                   <a href={tool.url} target="_blank" rel="noopener noreferrer"
-                    className="font-mono text-xs text-cream-muted hover:text-cream-DEFAULT transition-colors">
+                    className="font-mono text-xs text-cream-muted hover:text-crimson transition-colors">
                     {tool.domain} →
                   </a>
                   <p className="font-sans text-xs text-cream-muted mt-4 leading-relaxed">{tool.description}</p>
@@ -204,33 +201,7 @@ export default function Ritualware() {
         </div>
       </div>
 
-      {/* Key design decisions */}
-      <div className="bg-noir-card border border-noir-border p-8 rounded-sm mb-16">
-        <p className="font-mono text-xs text-gold-muted tracking-widest mb-6">KEY DESIGN DECISIONS</p>
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            { title: 'AI-optional, not AI-mandatory', body: 'Every feature has a rule-based default. AI adds a narrative layer when the user wants it. The apps work without hitting the AI API, load instantly, and don\'t fail silently.' },
-            { title: 'Granularity as a differentiator', body: 'These aren\'t 3-question vibe checks. The depth of the questions is the product — it\'s what makes the output feel true instead of generic.' },
-            { title: 'One profile, every app', body: 'The first quiz starts your Ritual Profile. Every app after that adds to it. Robin assembles the whole picture, then writes it back to you in Elle\'s own voice — the same way she reads everyone else.' },
-            { title: 'Source material is intellectual property', body: 'Every question in the Style Bible reflects Elle Porcher\'s personal style framework. The Glow Up Pyramid is her hierarchy. The NYC guide is her document. The content is original.' },
-          ].map((item, i) => (
-            <div key={i} className="bg-noir-elevated p-5 rounded-sm">
-              <h4 className="font-display text-lg text-cream-DEFAULT mb-2">{item.title}</h4>
-              <p className="font-sans text-sm text-cream-muted leading-relaxed">{item.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Cross-domain auth note */}
-      <div className="bg-noir-elevated border border-noir-border p-8 rounded-sm mb-16">
-        <p className="font-mono text-xs text-gold-muted tracking-widest mb-4">TECHNICAL: CROSS-DOMAIN AUTH</p>
-        <p className="font-sans text-sm text-cream-muted leading-relaxed">
-          Sessions stored in localStorage don't cross subdomains. Solution: pass <code className="bg-noir-card px-1 rounded text-crimson">access_token</code> and <code className="bg-noir-card px-1 rounded text-crimson">refresh_token</code> in the URL hash when navigating between apps. The receiving app reads them on init via <code className="bg-noir-card px-1 rounded text-crimson">supabase.auth.setSession()</code> and cleans the URL.
-        </p>
-      </div>
-
-      <a href="https://ritualware.app" target="_blank" rel="noopener noreferrer"
+      < href="https://ritualware.app" target="_blank" rel="noopener noreferrer"
         className="inline-block bg-crimson hover:bg-crimson-dark text-cream-DEFAULT font-mono text-sm tracking-widest px-8 py-4 transition-colors">
         VISIT RITUALWARE.APP →
       </a>
