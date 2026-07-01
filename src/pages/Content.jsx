@@ -148,7 +148,7 @@ export default function Content() {
           onClick={() => setTiktokExpanded(v => !v)}
           className="mt-6 font-mono text-xs tracking-widest transition-colors"
           style={{ color: '#69C9D0' }}>
-          {tiktokExpanded ? '— SHOW LESS' : '+ SEE MORE'}
+          {tiktokExpanded ? '- SHOW LESS' : '+ SEE MORE'}
         </button>
       </section>
 

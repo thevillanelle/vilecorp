@@ -8,7 +8,7 @@ export default function CaseCard({ number, title, summary, expanded, tags }) {
       onClick={() => setOpen(!open)}>
       <div className="flex items-start justify-between gap-4 mb-3">
         <span className="font-mono text-xs text-gold tracking-widest">{number}</span>
-        <span className="font-mono text-xs text-[#8A8075]">{open ? '— CLOSE' : '+ EXPAND FILE'}</span>
+        <span className="font-mono text-xs text-[#8A8075]">{open ? '- CLOSE' : '+ EXPAND FILE'}</span>
       </div>
       <h3 className="font-display text-2xl text-[#E8E3DC] tracking-wide mb-2">{title}</h3>
       <p className="text-[#8A8075] text-sm leading-relaxed mb-4">{summary}</p>
