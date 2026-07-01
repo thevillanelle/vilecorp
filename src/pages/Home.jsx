@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import SocialLinks from '../components/SocialLinks'
 
 const WorldMap = () => (
@@ -32,23 +31,7 @@ export default function Home() {
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.9, duration: 0.5 }}
             className="h-px max-w-[120px] mb-10 origin-left" style={{ background: 'var(--crimson)' }}/>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-            className="flex flex-wrap gap-3 mb-10">
-            {[
-              { to: '/content', label: 'CONTENT' },
-              { to: '/ritualware', label: 'RITUALWARE' },
-              { to: '/shop', label: 'SHOP' },
-              { to: '/bio', label: 'BIO' },
-              { to: '/links', label: 'LINKS' },
-            ].map(item => (
-              <Link key={item.to} to={item.to}
-                className="font-mono text-xs tracking-widest text-cream-muted border border-noir-border px-5 py-3 hover:border-crimson hover:text-cream-DEFAULT transition-colors">
-                {item.label}
-              </Link>
-            ))}
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
             <SocialLinks />
           </motion.div>
         </div>
