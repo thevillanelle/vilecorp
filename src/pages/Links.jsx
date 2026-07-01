@@ -93,7 +93,7 @@ export default function Links() {
 
       {/* Footer note */}
       <motion.p {...fade(0.85)} className="font-mono text-xs text-center mt-12" style={{ color: 'var(--cream-muted)' }}>
-        © 2025 VILE LLC ✦ <a href="/" className="hover:text-crimson transition-colors">vilecorp.com</a>
+        © 2026 VILE LLC ✦ <a href="/" className="hover:text-crimson transition-colors">vilecorp.com</a>
       </motion.p>
     </main>
   )

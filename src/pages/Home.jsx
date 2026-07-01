@@ -15,8 +15,8 @@ const WorldMap = () => (
 
 export default function Home() {
   return (
-    <main>
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
+    <main className="flex-1 flex flex-col">
+      <section className="relative flex-1 flex items-center overflow-hidden pt-16">
         <WorldMap />
         <div className="relative z-10 px-6 md:px-16 max-w-5xl mx-auto w-full">
 
@@ -24,8 +24,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.9 }}
             className="font-serif italic leading-[1.15] text-cream-DEFAULT mb-10"
-            style={{ fontSize: 'clamp(52px, 7.5vw, 112px)' }}>
-            Pleasure is<br />a system.
+            style={{ fontSize: 'clamp(32px, 5vw, 84px)' }}>
+            Pleasure is a system you architect, not something you stumble into.
           </motion.h1>
 
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.9, duration: 0.5 }}
