@@ -52,12 +52,12 @@ export const AFFILIATES = [
     name: 'Shop My Top Shelf',
     description: "Elle's curated beauty, fragrance, and lifestyle picks. Every bottle, every ritual, vetted.",
     cta: 'Browse the Shelf',
-    url: 'YOUR_TOP_SHELF_URL',
+    url: 'https://shopmy.us/public/villanelle',
   },
   {
     name: 'Amazon Storefront',
     description: 'Everything Elle reaches for, sourced and organized so you can shop the life without the research.',
     cta: 'Shop on Amazon',
-    url: 'YOUR_AMAZON_STOREFRONT_URL',
+    url: 'https://www.amazon.com/shop/influencer-855ec910',
   },
 ]
