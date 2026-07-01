@@ -8,6 +8,7 @@ import Systems from './pages/Systems'
 import Bio from './pages/Bio'
 import Shop from './pages/Shop'
 import Links from './pages/Links'
+import Admin from './pages/Admin'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/bio" element={<Bio />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/links" element={<Links />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </div>
