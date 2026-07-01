@@ -9,6 +9,7 @@ const links = [
   { to: '/systems', label: 'SYSTEMS' },
   { to: '/shop', label: 'SHOP' },
   { to: '/bio', label: 'BIO' },
+  { to: '/links', label: 'LINKS' },
 ]
 
 export default function Nav() {
