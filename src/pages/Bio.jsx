@@ -8,7 +8,7 @@ const tabs = [
     label: 'THE ARTIST',
     body: [
       'Elle Porcher is a composer and artist based in New York City. She scored her first production in childhood — music for her mother\'s theater work. The instinct was there before the vocabulary for it was.',
-      'Her debut album Distressed and Darling explores women who stop managing themselves down. She scores emotional architecture — the feeling underneath the image, the tension that makes a moment land.',
+      'Her debut album Distressed and Darling — in progress now — explores women who stop managing themselves down. She scores emotional architecture — the feeling underneath the image, the tension that makes a moment land.',
       'Film and television scoring is the destination. An EGOT-level legacy is the ceiling. Everything happening now — the content, the software, the cultural analysis — is infrastructure toward that.',
       'The through-line across all of it: the compositional logic. Find the signal. Name the structure. Score the feeling.',
     ],
@@ -30,7 +30,7 @@ const tabs = [
       'VILE LLC is the holding structure. Three compounding assets — content, software, music — one founder, one lane.',
       'The content is the acquisition engine. 60,000 followers and 2.6 million views across platforms, built on cultural commentary, fraud analysis, and a documented aesthetic life. The audience followed because the content is precise about desire and ruthless about performance. They stay because she\'s building something with them in it.',
       'Ritualware is the software — six apps, one database, one Ritual Profile that compounds over time. Built on the opposite assumption from most lifestyle software: that you already know who you are, and you need tools sophisticated enough to match you.',
-      'The music is the destination. Everything compounds toward it.',
+      'The music is the destination. Distressed and Darling is in progress. Everything compounds toward it.',
       'She is not trying to be relatable. She is trying to be undeniable. She\'s on track.',
     ],
   },
