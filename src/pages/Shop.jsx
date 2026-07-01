@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
-import { PRODUCTS, AFFILIATES } from '../config/products'
+import { PRODUCTS } from '../config/products'
 
 function ProductCard({ product, index }) {
   const { name, price, badge, description, cta, type, url } = product
@@ -67,38 +67,6 @@ function ProductCard({ product, index }) {
   )
 }
 
-function AffiliateCard({ affiliate, index }) {
-  const { name, description, cta, url } = affiliate
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4 + index * 0.08, duration: 0.5 }}
-      className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-6"
-      style={{ background: 'var(--noir-elevated)', border: '1px solid var(--noir-border)' }}
-    >
-      <div>
-        <h3 className="font-sans font-semibold text-base mb-1" style={{ color: 'var(--cream)' }}>{name}</h3>
-        <p className="font-sans text-sm" style={{ color: 'var(--cream-muted)' }}>{description}</p>
-      </div>
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-mono text-xs tracking-widest px-5 py-3 shrink-0 transition-colors"
-        style={{
-          background: 'transparent',
-          color: 'var(--cream-muted)',
-          border: '1px solid var(--noir-border)',
-        }}
-        onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--crimson)'; e.currentTarget.style.color = 'var(--crimson)' }}
-        onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--noir-border)'; e.currentTarget.style.color = 'var(--cream-muted)' }}
-      >
-        {cta} →
-      </a>
-    </motion.div>
-  )
-}
 
 export default function Shop() {
   return (
@@ -117,21 +85,9 @@ export default function Shop() {
         Systems, guides, and frameworks for the woman who architects her pleasure.
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-        {PRODUCTS.map((product, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {PRODUCTS.filter(p => p.type === 'stripe').map((product, i) => (
           <ProductCard key={product.id} product={product} index={i} />
-        ))}
-      </div>
-
-      <div className="mb-4">
-        <SectionLabel>AFFILIATE PICKS</SectionLabel>
-        <p className="font-sans text-sm text-cream-muted mb-8">
-          Elle earns a small commission on purchases made through these links — at no extra cost to you.
-        </p>
-      </div>
-      <div className="flex flex-col gap-4">
-        {AFFILIATES.map((a, i) => (
-          <AffiliateCard key={a.name} affiliate={a} index={i} />
         ))}
       </div>
     </main>
