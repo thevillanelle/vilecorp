@@ -8,7 +8,7 @@ import InstagramFeed from '../components/InstagramFeed'
 const youtubeVideos = [
   { id: '2pTGvJgBNq4', title: null, series: null },
   { id: 'fdKEyU-YgEk', title: null, series: null },
-  { id: null, title: null, series: null },
+  { id: 'Hgs8j-KtLGk', title: null, series: null },
 ]
 
 const tiktokPosts = [
