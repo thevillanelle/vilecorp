@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import SocialLinks from '../components/SocialLinks'
+import { Link } from 'react-router-dom'
 
 const WorldMap = () => (
   <svg viewBox="0 0 1000 500" className="absolute inset-0 w-full h-full opacity-[0.04]"
@@ -25,15 +25,28 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.9 }}
             className="font-serif italic leading-[1.15] text-cream-DEFAULT mb-10"
             style={{ fontSize: 'clamp(52px, 7.5vw, 112px)' }}>
-            The pleasure<br />is the point.
+            Pleasure is<br />a system.
           </motion.h1>
 
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.9, duration: 0.5 }}
             className="h-px max-w-[120px] mb-10 origin-left" style={{ background: 'var(--crimson)' }}/>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
-            <SocialLinks />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
+            className="flex gap-3">
+            <Link to="/content"
+              className="font-mono text-xs tracking-widest px-6 py-3 rounded-full transition-colors"
+              style={{ background: 'var(--crimson)', color: 'var(--cream)' }}>
+              THE WORK
+            </Link>
+            <Link to="/links"
+              className="font-mono text-xs tracking-widest px-6 py-3 rounded-full transition-colors"
+              style={{ border: '1px solid var(--noir-border)', color: 'var(--cream-muted)' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--crimson)'; e.currentTarget.style.color = 'var(--cream)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--noir-border)'; e.currentTarget.style.color = 'var(--cream-muted)' }}>
+              LINKS
+            </Link>
           </motion.div>
+
         </div>
       </section>
     </main>
