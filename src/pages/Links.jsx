@@ -102,7 +102,7 @@ export default function Links() {
             label={freeProduct.name}
             sub={freeProduct.description}
             badge="FREE"
-            external
+            download
           />
         </motion.section>
       )}

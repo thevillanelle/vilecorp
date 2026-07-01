@@ -18,10 +18,10 @@ export const PRODUCTS = [
     name: 'The Glow Up Pyramid',
     price: null,
     badge: 'FREE',
-    description: 'Five tiers, every level of the glow-up named and sequenced. The static version is here — the interactive experience lives in the Glow Up app.',
-    cta: 'Try the App',
+    description: 'Five tiers, every level of the glow-up named and sequenced. Download the framework — then take it further with the interactive Glow Up app.',
+    cta: 'Download Free',
     type: 'download',
-    url: 'https://ritualware.app/glowup',
+    url: '/downloads/glow-up-pyramid.pdf',
   },
   {
     id: 'hourglass-formula',
