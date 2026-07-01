@@ -10,10 +10,10 @@ const apps = [
     color: 'text-gold-DEFAULT',
     borderColor: 'border-gold-DEFAULT',
     features: [
-      'The Style Bible — built once, applied every day. Builds your color season, your silhouette rules, and the things you\'ll never wear again',
-      'The Oracle — reads your rules and tells you exactly what to wear, head to toe, with live weather and a mood board pulled to match',
-      'My Looks — every Oracle result, saved, favorited, ready to repeat',
-      'Inspo Upload — drop in a photo, the Oracle reads the palette and silhouette and folds it back into your rules',
+      'The Style Bible: built once, applied every day. Builds your color season, your silhouette rules, and the things you\'ll never wear again',
+      'The Oracle: reads your rules and tells you exactly what to wear, head to toe, with live weather and a mood board pulled to match',
+      'My Looks: every Oracle result, saved, favorited, ready to repeat',
+      'Inspo Upload: drop in a photo, the Oracle reads the palette and silhouette and folds it back into your rules',
     ],
   },
   {
@@ -25,9 +25,9 @@ const apps = [
     color: 'text-crimson',
     borderColor: 'border-crimson',
     features: [
-      'The Glow Up Audit — skin, sleep, nutrition, fitness, hair, fragrance and more, scored, with quick wins and a real plan',
-      'Style Finder — three doors in: Clueless, Rebrand, or Makeover. Each ends in a named archetype, the truth, and your blind spots',
-      'Client Profile — your Style Finder result and your Glow Up scorecard, together',
+      'The Glow Up Audit: skin, sleep, nutrition, fitness, hair, fragrance and more, scored, with quick wins and a real plan',
+      'Style Finder: three doors in. Clueless, Rebrand, or Makeover. Each ends in a named archetype, the truth, and your blind spots',
+      'Client Profile: your Style Finder result and your Glow Up scorecard, together',
     ],
   },
   {
@@ -39,12 +39,12 @@ const apps = [
     color: 'text-cream-muted',
     borderColor: 'border-cream-muted',
     features: [
-      'Neighborhood Finder — matches you to where you\'d actually thrive, NYC or LA, with the reasoning shown',
-      'Third Space Finder + The Map — venues curated by what you need, pinned to a custom map',
-      'Burnout Audit — names your burnout type, severity, and what to do about it',
-      'Quarterly Reinvention — a season-by-season plan for what\'s next',
-      'Dating Profile Builder — your goal, your type, your pattern, and the one rule to stop breaking',
-      "The Guide — Elle's Guide to Thriving in NYC, chapter by chapter, each linked to the tool that goes with it",
+      'Neighborhood Finder: matches you to where you\'d actually thrive, NYC or LA, with the reasoning shown',
+      'Third Space Finder + The Map: venues curated by what you need, pinned to a custom map',
+      'Burnout Audit: names your burnout type, severity, and what to do about it',
+      'Quarterly Reinvention: a season-by-season plan for what\'s next',
+      'Dating Profile Builder: your goal, your type, your pattern, and the one rule to stop breaking',
+      "The Guide: Elle's Guide to Thriving in NYC, chapter by chapter, each linked to the tool that goes with it",
     ],
   },
   {
@@ -56,10 +56,10 @@ const apps = [
     color: 'text-gold-muted',
     borderColor: 'border-gold-muted',
     features: [
-      'Projects — every active build, tracked by status, with tasks, links, and notes attached',
-      'My Circle — your people: their role in your work, the skills they bring, how to reach them',
-      'Skills — what you\'re learning, what you\'ve mastered, tracked honestly by level',
-      'Goals — time-boxed, categorized, checked off',
+      'Projects: every active build, tracked by status, with tasks, links, and notes attached',
+      'My Circle: your people, their role in your work, the skills they bring, how to reach them',
+      'Skills: what you\'re learning, what you\'ve mastered, tracked honestly by level',
+      'Goals: time-boxed, categorized, checked off',
     ],
   },
   {
@@ -71,9 +71,9 @@ const apps = [
     color: 'text-crimson-light',
     borderColor: 'border-crimson-light',
     features: [
-      'Five quizzes — Fire Type, Career, Home, Creative Income, Risk. Each narrows your actual FIRE number and the portfolio to match',
-      'The Plan — every quiz synthesized into one roadmap: your number, your age, your monthly surplus',
-      'Debt Payoff + Milestones — real dates. When you\'re debt-free, when the emergency fund is full, when the down payment is ready',
+      'Five quizzes: Fire Type, Career, Home, Creative Income, Risk. Each narrows your actual FIRE number and the portfolio to match',
+      'The Plan: every quiz synthesized into one roadmap. Your number, your age, your monthly surplus',
+      'Debt Payoff + Milestones: real dates. When you\'re debt-free, when the emergency fund is full, when the down payment is ready',
     ],
   },
   {
@@ -85,8 +85,8 @@ const apps = [
     color: 'text-gold-dim',
     borderColor: 'border-gold-dim',
     features: [
-      'Your Dashboard — every result from every app: your style and saved looks, your glow tier, your neighborhood, your FIRE number, your active projects',
-      'Your Ritual Profile — everything the suite knows about you, written as a single piece in Elle\'s own voice. Not a list of stats. A read.',
+      'Your Dashboard: every result from every app. Your style and saved looks, your glow tier, your neighborhood, your FIRE number, your active projects',
+      'Your Ritual Profile: everything the suite knows about you, written as a single piece in Elle\'s own voice. Not a list of stats. A read.',
     ],
   },
 ]
@@ -111,7 +111,7 @@ const standaloneTools = [
     question: 'Where do I work out?',
     domain: 'thevillanelle.github.io/eqx-doubles',
     url: 'https://thevillanelle.github.io/eqx-doubles/index.html',
-    desc: 'Two classes that actually work together. Matched by type, timed for real travel, across all 36 NYC Equinox locations. For Equinox members — no login required.',
+    desc: 'Two classes that actually work together. Matched by type, timed for real travel, across all 36 NYC Equinox locations. For Equinox members, no login required.',
   },
 ]
 
@@ -128,7 +128,7 @@ export default function Ritualware() {
         VISIT RITUALWARE.APP →
       </a>
       <p className="font-sans text-cream-muted max-w-3xl mb-16 leading-relaxed">
-        Ritualware is the software company behind the suite — apps built for the life you're designing on purpose. Six apps share one Ritual Profile that compounds over time. Three more are their own worlds entirely.
+        Ritualware is the software company behind the suite: apps built for the life you're designing on purpose. Six apps share one Ritual Profile that compounds over time. Three more are their own worlds entirely.
       </p>
 
       {/* The six connected apps */}
@@ -151,7 +151,7 @@ export default function Ritualware() {
                 <ul className="space-y-2">
                   {app.features.map((f, j) => (
                     <li key={j} className="flex gap-3 font-sans text-sm text-cream-muted leading-relaxed">
-                      <span className="text-crimson shrink-0 mt-0.5">—</span>
+                      <span className="text-crimson shrink-0 mt-0.5">·</span>
                       <span>{f}</span>
                     </li>
                   ))}

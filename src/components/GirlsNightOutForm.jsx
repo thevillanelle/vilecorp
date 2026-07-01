@@ -97,7 +97,7 @@ export default function GirlsNightOutForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full">
       <p className="font-mono text-xs tracking-[0.2em] text-cream-muted mb-4 uppercase">
-        Girls' Night Out — Join the Waitlist
+        Girls' Night Out: Join the Waitlist
       </p>
 
       <div className="flex flex-col gap-3">

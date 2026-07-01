@@ -7,9 +7,9 @@ const tabs = [
     id: 'artist',
     label: 'THE ARTIST',
     body: [
-      'Elle Porcher is a composer and artist based in New York City. She scored her first production in childhood — music for her mother\'s theater work. The instinct was there before the vocabulary for it was.',
-      'Her debut album Distressed and Darling — in progress now — explores women who stop managing themselves down. She scores emotional architecture — the feeling underneath the image, the tension that makes a moment land.',
-      'Film and television scoring is the destination. An EGOT-level legacy is the ceiling. Everything happening now — the content, the software, the cultural analysis — is infrastructure toward that.',
+      'Elle Porcher is a composer and artist based in New York City. She scored her first production in childhood: music for her mother\'s theater work. The instinct was there before the vocabulary for it was.',
+      'Her debut album Distressed and Darling (in progress now) explores women who stop managing themselves down. She scores emotional architecture: the feeling underneath the image, the tension that makes a moment land.',
+      'Film and television scoring is the destination. An EGOT-level legacy is the ceiling. Everything happening now, the content, the software, the cultural analysis, is infrastructure toward that.',
       'The through-line across all of it: the compositional logic. Find the signal. Name the structure. Score the feeling.',
     ],
   },
@@ -17,9 +17,9 @@ const tabs = [
     id: 'analyst',
     label: 'THE ANALYST',
     body: [
-      'Elle is from New York, which means she knows fraud. She decodes desire, performance, and manipulation across pop culture and markets — from Housewives to Hindenburg, from luxury scarcity to securities fraud. It\'s all image construction. She reads the documents.',
+      'Elle is from New York, which means she knows fraud. She decodes desire, performance, and manipulation across pop culture and markets: from Housewives to Hindenburg, from luxury scarcity to securities fraud. It\'s all image construction. She reads the documents.',
       'She talks about fraud because she understands what people want and exactly how they\'re willing to lie to get it. She loves villains because they\'re honest about their desires.',
-      'Elle\'s World is the signature series: choose a figure or theme, embody their aesthetic language, decode the psychology and power underneath it, use glam as analytical methodology. The convergence point of composer brain, theater roots, fraud analysis, fashion knowledge, and performance studies — in one frame.',
+      'Elle\'s World is the signature series: choose a figure or theme, embody their aesthetic language, decode the psychology and power underneath it, use glam as analytical methodology. The convergence point of composer brain, theater roots, fraud analysis, fashion knowledge, and performance studies. In one frame.',
       'She is not trying to be Coffeezilla. She is building something that has never existed.',
     ],
   },
@@ -27,7 +27,7 @@ const tabs = [
     id: 'empire',
     label: 'THE EMPIRE',
     body: [
-      'VILE LLC is the holding structure. Three compounding assets — content, software, music — one founder, one lane.',
+      'VILE LLC is the holding structure. Three compounding assets: content, software, music. One founder, one lane.',
       'The content is the acquisition engine. 60,000 followers and 2.6 million views across platforms, built on cultural commentary, fraud analysis, and a documented aesthetic life. The audience followed because the content is precise about desire and ruthless about performance. They stay because she\'s building something with them in it.',
       'Ritualware is the software — six apps, one database, one Ritual Profile that compounds over time. Built on the opposite assumption from most lifestyle software: that you already know who you are, and you need tools sophisticated enough to match you.',
       'The music is the destination. Distressed and Darling is in progress. Everything compounds toward it.',
