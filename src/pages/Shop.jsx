@@ -84,11 +84,15 @@ export default function Shop() {
         Systems, guides, and frameworks for the woman who architects her pleasure.
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {PRODUCTS.filter(p => p.type === 'stripe').map((product, i) => (
           <ProductCard key={product.id} product={product} index={i} />
         ))}
       </div>
+
+      {PRODUCTS.filter(p => p.type === 'download').map((product, i) => (
+        <ProductCard key={product.id} product={product} index={i} />
+      ))}
     </main>
   )
 }
