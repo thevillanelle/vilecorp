@@ -43,58 +43,64 @@ function LinkCard({ href, label, sub, badge, external, download }) {
 
 export default function Links() {
   return (
-    <main className="pt-24 pb-24 px-6 max-w-lg mx-auto">
+    <main className="pb-24">
 
-      {/* Identity */}
-      <motion.div {...fade(0.1)} className="text-center mb-10">
-        <div className="font-display tracking-[0.02em] sm:tracking-widest mb-1" style={{ color: 'var(--crimson)', fontSize: 'clamp(2.25rem, 10.5vw, 3rem)' }}>
-          ELLE PORCHER
-        </div>
-        <p className="font-serif italic text-lg" style={{ color: 'var(--cream-muted)' }}>
-          verbose + bougie ✦ composer ✦ cultural analyst
-        </p>
-      </motion.div>
+      {/* Identity + social — constrained width */}
+      <div className="pt-24 px-6 max-w-lg mx-auto">
+        <motion.div {...fade(0.1)} className="text-center mb-10">
+          <div className="font-display tracking-[0.02em] sm:tracking-widest mb-1" style={{ color: 'var(--crimson)', fontSize: 'clamp(2.25rem, 10.5vw, 3rem)' }}>
+            ELLE PORCHER
+          </div>
+          <p className="font-serif italic text-lg" style={{ color: 'var(--cream-muted)' }}>
+            verbose + bougie ✦ composer ✦ cultural analyst
+          </p>
+        </motion.div>
 
-      {/* Social Links */}
-      <motion.div {...fade(0.2)} className="flex justify-center mb-12">
-        <SocialLinks className="gap-8" />
-      </motion.div>
+        <motion.div {...fade(0.2)} className="flex justify-center mb-12">
+          <SocialLinks className="gap-8" />
+        </motion.div>
+      </div>
 
-      {/* Instagram Ticker */}
+      {/* Instagram ticker — full viewport width, no tricks needed */}
       <InstagramTicker limit={12} />
 
-      {/* GNO Waitlist */}
-      <motion.section {...fade(0.35)} className="mb-12">
-        <GirlsNightOutForm />
-      </motion.section>
+      {/* Rest of content — constrained width */}
+      <div className="px-6 max-w-lg mx-auto">
 
-      {/* Divider */}
-      <motion.div
-        initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.45, duration: 0.4 }}
-        className="h-px mb-12 origin-left"
-        style={{ background: 'var(--noir-border)' }}
-      />
+        {/* GNO Waitlist */}
+        <motion.section {...fade(0.35)} className="mb-12">
+          <GirlsNightOutForm />
+        </motion.section>
 
-      {/* Affiliates */}
-      <motion.section {...fade(0.7)} className="mb-6">
-        <p className="font-mono text-xs tracking-[0.2em] text-cream-muted mb-4 uppercase">Shop with Elle</p>
-        <div className="flex flex-col gap-3">
-          {AFFILIATES.map(a => (
-            <LinkCard
-              key={a.name}
-              href={a.url}
-              label={a.name}
-              sub={a.description}
-              external
-            />
-          ))}
-        </div>
-      </motion.section>
+        {/* Divider */}
+        <motion.div
+          initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.45, duration: 0.4 }}
+          className="h-px mb-12 origin-left"
+          style={{ background: 'var(--noir-border)' }}
+        />
 
-      {/* Footer note */}
-      <motion.p {...fade(0.85)} className="font-mono text-xs text-center mt-12" style={{ color: 'var(--cream-muted)' }}>
-        © 2026 VILE LLC ✦ <a href="/" className="hover:text-crimson transition-colors">vilecorp.com</a>
-      </motion.p>
+        {/* Affiliates */}
+        <motion.section {...fade(0.7)} className="mb-6">
+          <p className="font-mono text-xs tracking-[0.2em] text-cream-muted mb-4 uppercase">Shop with Elle</p>
+          <div className="flex flex-col gap-3">
+            {AFFILIATES.map(a => (
+              <LinkCard
+                key={a.name}
+                href={a.url}
+                label={a.name}
+                sub={a.description}
+                external
+              />
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Footer note */}
+        <motion.p {...fade(0.85)} className="font-mono text-xs text-center mt-12" style={{ color: 'var(--cream-muted)' }}>
+          © 2026 VILE LLC ✦ <a href="/" className="hover:text-crimson transition-colors">vilecorp.com</a>
+        </motion.p>
+
+      </div>
     </main>
   )
 }
