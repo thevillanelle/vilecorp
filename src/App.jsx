@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="h-dvh flex flex-col overflow-hidden bg-noir text-cream">
       <Nav />
-      <div ref={scrollRef} className="flex-1 flex flex-col overflow-y-auto overflow-x-hidden w-full">
+      <div ref={scrollRef} className="flex-1 flex flex-col overflow-y-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/content" element={<Content />} />
