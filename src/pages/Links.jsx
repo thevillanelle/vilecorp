@@ -47,7 +47,7 @@ export default function Links() {
 
       {/* Identity */}
       <motion.div {...fade(0.1)} className="text-center mb-10">
-        <div className="font-display text-5xl tracking-[0.05em] sm:tracking-widest mb-1" style={{ color: 'var(--crimson)' }}>
+        <div className="font-display tracking-[0.02em] sm:tracking-widest mb-1" style={{ color: 'var(--crimson)', fontSize: 'clamp(2.25rem, 10.5vw, 3rem)' }}>
           ELLE PORCHER
         </div>
         <p className="font-serif italic text-lg" style={{ color: 'var(--cream-muted)' }}>
