@@ -19,9 +19,7 @@ export default function InstagramTicker({ limit = 12 }) {
     <div style={{
       overflow: 'hidden',
       width: '100vw',
-      position: 'relative',
-      left: '50%',
-      transform: 'translateX(-50%)',
+      marginLeft: 'calc(-50vw + 50%)',
       marginBottom: '3rem',
     }}>
       <style>{`
